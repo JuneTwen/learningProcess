@@ -1,2 +1,2 @@
 # learningProcess
-just for learning java
+Just for learning java
