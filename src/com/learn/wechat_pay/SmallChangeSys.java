@@ -17,11 +17,11 @@ public class SmallChangeSys {
         Scanner in = new Scanner(System.in);
 
         while(loop){
-            System.out.println("-------------Menu-------------");
-            System.out.println("-------------1 Detail-----------");
+            System.out.println("-------------Menu-----------------");
+            System.out.println("-------------1 Detail-------------");
             System.out.println("-------------2 Earnings-----------");
-            System.out.println("-------------3 Consume-----------");
-            System.out.println("-------------4 Exit-----------");
+            System.out.println("-------------3 Consume------------");
+            System.out.println("-------------4 Exit---------------");
             System.out.print("Please input your choice: ");
             chioce = in.next();
             switch (chioce){
@@ -38,7 +38,7 @@ public class SmallChangeSys {
                     balance += earnings;
                     System.out.println("Done! Your current balance is: "+balance);
                     Date now = new Date();
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                     String createTime = dateFormat.format(now);
                     details[loopNums++] = "Earning"+"\t+"+earnings+"\t"+createTime+"\t"+balance;
                     break;
@@ -51,7 +51,7 @@ public class SmallChangeSys {
                     balance -= consume;
                     System.out.println("Done! Your current balance is: "+balance);
                     Date now3 = new Date();
-                    SimpleDateFormat dateFormat3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    SimpleDateFormat dateFormat3 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                     String createTime3 = dateFormat3.format(now3);
                     details[loopNums++] = consumeDetail+"\t-"+consume+"\t"+createTime3+"\t"+balance;
                     break;
