@@ -3,6 +3,7 @@ package com.learn.collection_.list_;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"all"})
 public class Book {
     private String name;
     private int price;
@@ -61,13 +62,21 @@ public class Book {
     }
 
     public static void main(String[] args) {
-        @SuppressWarnings({"all"})
+
         List list = new ArrayList();
-        list.add(new Book("one",15,"oneAuthor"));
-        list.add(new Book("two",10,"twoAuthor"));
-        list.add(new Book("three",11,"threeAuthor"));
-        System.out.println(list);
-        sort(list);
-        System.out.println(list);
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        for (int i = 11; i < 15; i++) {
+            list.add(i);
+        }
+        list.add(16);
+        list.add(17);
+//        list.add(new Book("one",15,"oneAuthor"));
+//        list.add(new Book("two",10,"twoAuthor"));
+//        list.add(new Book("three",11,"threeAuthor"));
+//        System.out.println(list);
+//        sort(list);
+//        System.out.println(list);
     }
 }
