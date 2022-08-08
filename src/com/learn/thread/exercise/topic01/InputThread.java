@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class InputThread implements Runnable{
     private OutThread out;
+    private Scanner scanner = new Scanner(System.in);
 
     public InputThread(OutThread out) {
         this.out = out;
@@ -11,7 +12,12 @@ public class InputThread implements Runnable{
 
     @Override
     public void run() {
-        Scanner scanner = new Scanner(System.in);
-        out.setLoop(scanner.next());
+        while (true) {
+            String str = scanner.next();
+            if (str.equals("Q")){
+                out.setLoop(str);
+                break;
+            }
+        }
     }
 }
